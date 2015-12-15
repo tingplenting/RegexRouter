@@ -18,13 +18,10 @@ class RegexRouter {
                 array_shift($params);
                 return call_user_func_array($callback, array_values($params));
             } 
-            else {
-                $error = $err;
-            }
 
         }
 
-        call_user_func($error);
+        return $err();
 
     }
     
